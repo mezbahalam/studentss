@@ -1,8 +1,8 @@
 class Name
 
-  attr_reader :title, :first_name, :middle_name, :last_name
-  attr_writer :title, :first_name, :middle_name, :last_name
-  # attr_accessor :title, :first_name, :middle_name, :last_name
+  # attr_reader :title, :first_name, :middle_name, :last_name
+  # attr_writer :title, :first_name, :middle_name, :last_name
+  attr_accessor :title, :first_name, :middle_name, :last_name
 
   def initialize(title, first_name, middle_name, last_name)
     @title = title
@@ -11,9 +11,17 @@ class Name
     @last_name = last_name
   end
 
-  # def title=(new_title)
-  #   @title = new_title
-  # end
+  #without use of attr_accessor you need both of this:
+
+    #without use of attr_reader method you need this:
+      # def title
+      #   @title
+      # end
+
+    #without use of attr_writer method you need this:
+      # def title=(new_title)
+      #   @title = new_title
+      # end
 
 
 end
