@@ -24,6 +24,14 @@ class Name
       # end
 
 
+  def full_name # creating a method
+    @first_name + " " + @middle_name + " " + @last_name
+  end
+
+  def full_name_with_title
+    @title + " " + full_name #calling method into a method and its the use of implicit return
+  end
+
 end
 
 puts 'Enter Your Name Title:'
@@ -40,7 +48,7 @@ last_name = gets.chomp
 
 name = Name.new(title, first_name, middle_name, last_name)
 # puts name.inspect # from memory
-puts name.title + " " + name.first_name+ " " + name.middle_name + " " + name.last_name
+puts name.full_name_with_title #calling method on instance
 
 puts 'Rewrite Your Name Title:'
 name.title = gets.chomp
@@ -52,4 +60,4 @@ puts 'Rewrite Your Name Last Name:'
 name.last_name = gets.chomp
 
 
-puts name.title + " " + name.first_name+ " " + name.middle_name + " " + name.last_name
+puts name.full_name_with_title
