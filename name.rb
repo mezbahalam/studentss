@@ -1,7 +1,7 @@
 class Name
 
   attr_reader :title, :first_name, :middle_name, :last_name
-  #attr_writer :title, :first_name, :middle_name, :last_name
+  attr_writer :title, :first_name, :middle_name, :last_name
   # attr_accessor :title, :first_name, :middle_name, :last_name
 
   def initialize(title, first_name, middle_name, last_name)
@@ -11,9 +11,9 @@ class Name
     @last_name = last_name
   end
 
-  def title=(new_title)
-    @title = new_title
-  end
+  # def title=(new_title)
+  #   @title = new_title
+  # end
 
 
 end
@@ -36,5 +36,12 @@ puts name.title + " " + name.first_name+ " " + name.middle_name + " " + name.las
 
 puts 'Rewrite Your Name Title:'
 name.title = gets.chomp
-puts "Title: #{name.title} "
+puts 'Rewrite Your Name First Name:'
+name.first_name = gets.chomp
+puts 'Rewrite Your Name Middle Name:'
+name.middle_name = gets.chomp
+puts 'Rewrite Your Name Last Name:'
+name.last_name = gets.chomp
+
+
 puts name.title + " " + name.first_name+ " " + name.middle_name + " " + name.last_name
