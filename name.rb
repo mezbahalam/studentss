@@ -34,6 +34,12 @@ class Name
     @title + " " + full_name #calling method into a method and its the use of implicit return
   end
 
+  #overwrite ruby's internal to_s method
+
+  def to_s
+    full_name_with_title
+  end
+
 end
 
 puts 'Enter Your Name Title:'
@@ -63,4 +69,5 @@ puts name.full_name_with_title #calling method on instance
 
 
 # puts name.full_name_with_title
-puts name.first_and_middle_name
+puts name
+puts name.inspect
