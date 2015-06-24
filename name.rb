@@ -3,6 +3,7 @@ class Name
   # attr_reader :title, :first_name, :middle_name, :last_name
   # attr_writer :title, :first_name, :middle_name, :last_name
   attr_accessor :title, :first_name, :middle_name, :last_name
+  attr_reader :first_and_middle_name
 
   def initialize(title, first_name, middle_name, last_name)
     @title = title
@@ -25,7 +26,8 @@ class Name
 
 
   def full_name # creating a method
-    @first_name + " " + @middle_name + " " + @last_name
+    @first_and_middle_name = @first_name + " " + @middle_name
+    @first_and_middle_name + " " + @last_name
   end
 
   def full_name_with_title
@@ -50,14 +52,15 @@ name = Name.new(title, first_name, middle_name, last_name)
 # puts name.inspect # from memory
 puts name.full_name_with_title #calling method on instance
 
-puts 'Rewrite Your Name Title:'
-name.title = gets.chomp
-puts 'Rewrite Your Name First Name:'
-name.first_name = gets.chomp
-puts 'Rewrite Your Name Middle Name:'
-name.middle_name = gets.chomp
-puts 'Rewrite Your Name Last Name:'
-name.last_name = gets.chomp
+# puts 'Rewrite Your Name Title:'
+# name.title = gets.chomp
+# puts 'Rewrite Your Name First Name:'
+# name.first_name = gets.chomp
+# puts 'Rewrite Your Name Middle Name:'
+# name.middle_name = gets.chomp
+# puts 'Rewrite Your Name Last Name:'
+# name.last_name = gets.chomp
 
 
-puts name.full_name_with_title
+# puts name.full_name_with_title
+puts name.first_and_middle_name
